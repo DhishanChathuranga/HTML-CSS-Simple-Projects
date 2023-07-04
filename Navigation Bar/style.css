@@ -1,0 +1,146 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Whole Doc */
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* navigation */
+nav{
+    background-color: #b82f6d;
+    height: 60px;
+}
+
+nav > h1{
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 30px;
+    text-transform: uppercase;
+    float: left;
+    padding: 9px 20px;
+    margin-left: 5%;
+}
+
+nav ul{
+    float: right;
+    margin-right: 5%;
+    padding: 19px 20px;
+}
+
+nav ul li{
+    display: inline;
+    padding: 8px 0px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 7px 10px;
+    font-size: 18px;
+}
+
+nav ul li a:hover{
+    color: #000;
+    text-shadow: 2px 2px 5px red;
+}
+
+label #s1, label #s2{
+    font-size: 30px;
+    color: #ffffff;
+    float: right;
+    padding: 12px;
+    margin-right: 5%;
+    cursor: pointer;
+    display: none;
+}
+
+#res-menu{
+    display: none;
+}
+
+/* Banner Aria */
+.banner-aria{
+    height: 600px;
+    background: linear-gradient(90deg, rgba(121,9,55,1) 0%, rgba(121,9,55,0.10698539669774154) 50%, rgba(121,9,55,1) 100%), url(./img/istockphoto-1280385511-612x612.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-text{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+/* Responsive */
+@media(max-width:1030px){
+    nav > h1{
+        font-size: 25px;
+    }
+    nav ul li{
+        padding: 6px 0px;
+    }
+    
+    nav ul li a{
+        font-size: 15px;
+    }
+}
+
+@media(max-width:800px){
+    /* Navigation */
+    label #s1{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #e23f88;
+        top: 50px;
+        left: -100%;
+        text-align: center;
+        transition: 0.5;
+        z-index: 10;
+        padding: 0;    
+    }
+    nav ul li{
+        display: block;
+        line-height: 30px;
+        padding: 30px;    
+    }
+
+    nav ul li:hover{
+        background-color: #ab0952;
+    }
+
+    /* For responsive state */
+    #res-menu:checked ~ ul{
+        left: 0;
+    }
+
+    #res-menu:checked ~ label #s1{
+        display: none;
+    }
+
+    #res-menu:checked ~ label #s2{
+        display: block;
+    }
+
+    /* Banner area */
+    .banner-text{
+        font-size: 40px;
+        font-weight: 500;
+        padding: 20px;
+    }
+}
+
